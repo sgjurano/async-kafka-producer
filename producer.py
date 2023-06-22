@@ -7,7 +7,7 @@ from confluent_kafka import SerializingProducer
 from confluent_kafka import Message
 
 CONFIG = {
-    'bootstrap.servers': "localhost:9092",  # here you may pass yor own brokers
+    'bootstrap.servers': 'localhost:9092',
     'acks': 'all',
 }
 
@@ -18,6 +18,8 @@ class KafkaProducer:
 
     def __init__(self, config: dict):
         self._producer = SerializingProducer(config)
+        # YOUR CODE GOES HERE
+        ...
 
     async def connect(self):
         # YOUR CODE GOES HERE
